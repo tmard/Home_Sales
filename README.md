@@ -33,10 +33,6 @@ Please see the file [Home_Sales](Notebook/Home_Sales.ipynb) for full details reg
 * Import necessary PySpark SQL functions
 * Read the `home_sales_revised.csv` daata into a Spark DataFrame
 * Check for null values, update data types and add `year` column
-
-![null_values](Images/null_values.png)  
-![updated_datatypes](Images/updated_datatypes.png)  
-
 * Create temporary table called `home_sales`
 
 
@@ -49,6 +45,7 @@ Answered the following questions using SparkSQL:
 ![yearly_avg_home_price_4bed](Images/yearly_avg_home_price_4bed.png)  
 
 2. What is the average price of a home for each year it was built that has three bedrooms and three bathrooms? Round to two decimal places.
+
 ![average_price_date_built](Images/average_price_date_built.png)  
 
 3. What is the average price of a home for each year that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round to two decimal places.
@@ -82,7 +79,7 @@ Answered the following questions using SparkSQL:
 ## Summary
 
 
-Three methods were utilized to compare the efficiency in processing the dataset, which included uncached, cached and parquet partitioned. As we can see, the cached method obtained the fastest and most efficient processing time of 0.0962 seconds, in comparison to the uncached and parquet partitioned method at a time of 0.1569 seconds and 0.1660 seconds, respectively. It would be anticipated that the parquet partitioned would have been the fastest method, as it utilized both caching and partitioning, however, this may be more evident in a much larger dataset. Regardless, this outcome identifies that utilizing caching techniques can improve runtime of data analysis tasks, which may be beneficial when working with larger datasets.  
+Three methods were utilized to compare the efficiency in processing the dataset, which included uncached, cached and parquet partitioned. As we can see, the cached method obtained the fastest and most efficient processing time of 0.0962 seconds, in comparison to the uncached and parquet partitioned method at a time of 0.1569 seconds and 0.1660 seconds, respectively. It would be anticipated that the parquet partitioned would have been the fastest method, as it utilized both caching and partitioning, however, this may be more evident in a much larger dataset. Regardless, this outcome identifies that utilizing caching techniques can improve runtime of data analysis tasks, which is beneficial when working with datasets. 
 
 
 
